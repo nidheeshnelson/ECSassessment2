@@ -25,7 +25,7 @@ public class SqlControl {
 		return "forexcel";
 	}
 	@PostMapping("/excelupload")
-	public String excelUpload(@RequestParam("file") MultipartFile file, HttpSession session, Model model) {
+	public String excelUpload(@RequestParam("file") MultipartFile file, HttpSession session) {
 		System.out.println("in excelupload");
 		 if (!file.isEmpty()) {
 	         // Process the file
@@ -54,11 +54,17 @@ public class SqlControl {
 		return "showexcel";
 	}
 	@PostMapping("/search")
-	public String search (@RequestParam("searchType") String searchType, @RequestParam("keyword") String keyword, Model model){
+	public String search (@RequestParam("searchType") String searchType, @RequestParam("keyword") String keyword, HttpSession session){
 		System.out.println(searchType+" in search "+keyword);
-		String json1 = ss.getJson(searchType, keyword);
-		System.out.println("In controller json1 is"+json1);
-		model.addAttribute("StudentList",json1);
+		String json = ss.getJson(searchType, keyword);
+		System.out.println("In controller json1 is "+json);
+		session.setAttribute("fromsql", json);
+		return "redirect:/searchresult1";
+	}
+	@GetMapping("/searchresult1")
+	public String getDataSql(Model model, HttpSession session) {
+		model.addAttribute("json1", session.getAttribute("fromsql"));
+		System.out.println("searchresult1"+model);
 		return "searchresult";
 	}
 }
