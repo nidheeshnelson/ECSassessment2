@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel sheet</title>
+    <script src="excel.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <form id="excelForm" enctype="multipart/form-data" >
+        <input type="file" id="excelFile" name="excelFile">
+        <button type="button" onclick="uploadExcel()">Upload Excel</button>
+    </form>
+    <form action="/showexcelm" method="get">
+        <label for="">For getting all data</label>
+        <button type="submit">Click</button>
+    </form>
+    
+</body>
+</html>
