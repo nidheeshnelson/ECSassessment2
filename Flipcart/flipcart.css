@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .bgforbody{
+    background-color: #eeeeee;
+  }
+
+/* Top Navigation Bar */
+.bgfornav{
+    background-color: #ffffff;
+}
+/* search bar */
+.input1{
+background: transparent;
+}
+/* Login Button and cart and seller */
+.container1 {
+    display: flex;
+    /* margin-top: 20px; */
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+  }
+  .login-btn, .cart, .seller {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .login-btn, .cart, .seller i {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+  .login-btn:hover {
+    background-color: #1e60d5;
+    color: #ffffff;
+  }
+
+  .login-btn #i1 {
+    font-size: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s;
+  }
+  .login-btn:hover #i1 {
+    transform: rotate(180deg);
+  }
+  
+  /* Login Button  dropdown*/
+  .login-btn span {
+    display: inline-block;
+  }
+
+  .dropdown-content .log1 #a1{
+    display:inline;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 220px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .log1 {
+    display: inline-flex;
+    }
+  .log1 h6 {
+    margin:8px;
+    margin-bottom: 5px;
+  }
+  .log1 a {
+    display: inline-block;
+    color: #000;
+    align-items: flex-end;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-right: 1px;
+  }
+   .dropdown-content #list {
+    display: block;
+    padding: 10px;
+  }
+  
+  .dropdown-content #list a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-content #list a i {
+    margin-right: 5px;
+  }
+   /* //Login Button  dropdown// */
+/* //Login Button and cart and seller// */
+
+  /* Items Bar*/
+  .container2 {
+    display: inline-flex;
+    margin-top: 20px; 
+    margin-right: 20px; 
+    margin-left: 20px; 
+    background-color: #ffffff;
+  }
+  
+  .container3 {
+    display: block;
+    align-items: center; /* Align items vertically */
+    width: 200px; 
+    height: 150px; 
+  }
+  
+  .container3 img {
+    align-items: center;
+    display: flex;
+  }
+  
+  .container4 {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  .downarrow1 {
+    text-decoration: none; /* Remove underline from the link */
+    color: #000; /* Set link color */
+  }
+  
+  .fa-chevron-down {
+    margin-left: 5px; /* Add space between link and icon */
+  }
+  
+   /* //Items Bar // */
+
+   /* Carousel Bar */
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    max-height: 200px;
+  }
+  .carousel-inner {
+    max-height: 400px; 
+  }
+  #carouse{
+    margin:20px 20px 20px 20px;
+  }
+/* //Carousel Bar// */
+ 
+/* cards in a container */
+.container8 {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  margin-right: 20px;
+}
+
+.cardimage {
+  width: 100%;
+  height: 60%;
+}
+
+.cardimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+
+.cardimage:hover img {
+  transform: scale(1.1);
+}
+
+.cardbody {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.cardbody p {
+  margin: 0;
+}
+
+.cardbody p span {
+  font-weight: 600;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+@media (max-width: 600px) {
+  .slider {
+    display: block;
+  }
+  .card {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+}
+/* //cards in a container// */
+
+/* footer */
+.footer {
+  color: white;
+  background-color: #282828; 
+  padding: 10px 0;
+  font-size: small;
+  text-align: center;
+  position:relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container51{
+  padding: 0 0 0 0;
+  margin: 5px 0 0 0;
+  position:relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container5, .container6{
+  flex-grow: 1;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  position:relative;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.vertical-line {
+  border-left: 1px solid black; 
+  margin: 0 20px 0 20px;
+}
+.h7{
+  text-align: center;
+color: #8d8d8d;
+}
+.container5 .cont1 ul li,
+.container5 .cont2 ul li,
+.container5 .cont3 ul li,
+.container5 .cont4 ul li{
+  list-style-type: none;
+}
+.container5 .cont1 ul li a,
+.container5 .cont2 ul li a,
+.container5 .cont3 ul li a,
+.container5 .cont4 ul li a{
+text-decoration: none;
+color: white;
+}
+.cont1,.cont2,.cont3,.cont4{
+  margin: 0;
+  width: 100%; /* Set width to 100% */
+  max-width: 120px; /* Set maximum width */
+  height: auto; /* Allow height to adjust based on content */
+}
+.cont5,.cont6{
+  margin: 20px;
+  width: 100%; /* Set width to 100% */
+  max-width: 200px; /* Set maximum width */
+  height: auto; /* Allow height to adjust based on content */
+}
+@media (min-width: 768px) {
+  .cont1, .cont2, .cont3, .cont4, .cont5, .cont6 {
+    width: 50%; /* Set width to 50% on screens wider than 768px */
+  }
+}
+.container7 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-basis: 100%;
+  margin-top: 10px;
+  border-top: 1px solid black; /* Add a horizontal line */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container7 a{
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+.container7 .links a i{
+  color: yellow;
+  margin: 10px;
+}
+.container7 .icons i{
+  margin: 7px;
+}
+/* //footer// */
